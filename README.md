@@ -5,6 +5,7 @@ Disable the A-Volute/Nahimic "audio effects service" auto-installed with Realtek
 * Dell G7 7590
 * MSI GS65 Stealth Thin 8RF
 * MSI GP73 Leopard 8RE
+* Lenovo Pro 7i 16IRX8H
 
 Pull requests are welcome if different devices have different hardware IDs for this service.
 
@@ -26,11 +27,19 @@ There are two different devices to check.
 * ROOT\Nahimic_Mirroring
 * SWC\VEN_AVOL&AID_0300
 * SWC\VEN_AVOL&AID_0400
+* ROOT\NahimicBTLink
+* ROOT\NahimicXVAD
+* SWC\VEN_AVOL&AID_0802
+* SWC\VEN_ELEVOC&AID_0001
 
 ## Next Steps (WIP)
 If the above was not done on a fresh Windows installation before Internet was connected, you likely will already have nahimic components installed.
 
-1. Uninstall Nahimic Companion
+1. Run the .reg file
+2. Reboot the computer
+3. Open Device Manager (WinKey + X, M)
+4. Find any Nahimic and AVolute entries, be sure to check under all audio related subgroups. Right Click and select "Uninstall Device", checking the "Attempt to remove the driver for this device."
+1. Uninstall Nahimic Companion (Note on some devices its installed to AppData without any uninstaller, just delete it)
 2. Uninstall Nahimic App
 3. Stop NahimicService from running in Task Manager, there is likely 32-bit and 64-bit service both running.
 4. Open Services (can be done from Task Manager), Find NahimicService(s), and set them to "Disabled" instead of "Automatic" 
@@ -39,8 +48,9 @@ If the above was not done on a fresh Windows installation before Internet was co
 7. Delete System32/A-Volute and System32/NahimicService EXEs
 
 ## Why remove Nahimic?
-* Adversely affects audio capture- 'muffling' the recorded desktop audio
+* Adversely affects audio capture, 'muffling' the recorded desktop audio
 * "Privacy" Policy https://www.nahimic.com/privacy-policy-apps/ and https://www.nahimic.com/privacy-policy-gdpr/
 * Can interfere with other post processing applications
+* Audio latency
 * Performance
 
