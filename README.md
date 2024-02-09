@@ -30,7 +30,6 @@ There are two different devices to check.
 * ROOT\NahimicBTLink
 * ROOT\NahimicXVAD
 * SWC\VEN_AVOL&AID_0802
-* SWC\VEN_ELEVOC&AID_0001
 
 ## Next Steps (WIP)
 If the above was not done on a fresh Windows installation before Internet was connected, you likely will already have nahimic components installed.
