@@ -5,7 +5,7 @@ Disable the A-Volute/Nahimic "audio effects service" auto-installed with Realtek
 * Dell G7 7590
 * MSI GS65 Stealth Thin 8RF
 * MSI GP73 Leopard 8RE
-* Lenovo Pro 7i 16IRX8H
+* Lenovo Pro 7i 16IRX8H - Note: See https://github.com/dreamsyntax/NoLatencyLegionAudio instead
 
 Pull requests are welcome if different devices have different hardware IDs for this service.
 
